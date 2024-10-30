@@ -32,10 +32,10 @@ This project implements Shamir's Secret Sharing scheme, a cryptographic method t
    ./gradlew clean build
    ```
 
-3. **Run the application:**
+3. **Run the application with multiple input files:**
 
    ```bash
-   ./gradlew run --args="src/main/resources/testcases/input1.json"
+   ./gradlew run --args="src/main/resources/testcases/input1.json src/main/resources/testcases/input2.json"
    ```
 
 ## Usage
@@ -68,6 +68,56 @@ The application processes test cases defined in JSON files located in the `src/m
     }
 }
 ```
+### Example Input (input2.json)
+
+```json
+{
+"keys": {
+    "n": 10,
+    "k": 7
+  },
+  "1": {
+    "base": "6",
+    "value": "13444211440455345511"
+  },
+  "2": {
+    "base": "15",
+    "value": "aed7015a346d63"
+  },
+  "3": {
+    "base": "15",
+    "value": "6aeeb69631c227c"
+  },
+  "4": {
+    "base": "16",
+    "value": "e1b5e05623d881f"
+  },
+  "5": {
+    "base": "8",
+    "value": "316034514573652620673"
+  },
+  "6": {
+    "base": "3",
+    "value": "2122212201122002221120200210011020220200"
+  },
+  "7": {
+    "base": "3",
+    "value": "20120221122211000100210021102001201112121"
+  },
+  "8": {
+    "base": "6",
+    "value": "20220554335330240002224253"
+  },
+  "9": {
+    "base": "12",
+    "value": "45153788322a1255483"
+  },
+  "10": {
+    "base": "7",
+    "value": "1101613130313526312514143"
+  }
+}
+```
 
 ### Output
 
@@ -87,10 +137,35 @@ Result:
 Secret (constant term): 3
 ==============================
 
+=== Processing Test Case 2 ===
+Number of points (n): 10
+Required points (k): 7
+
+Using points:
+x: 1, y: 995085094601491
+x: 2, y: 21394886326566393
+x: 3, y: 196563650089608567
+x: 4, y: 1016509518118225951
+x: 5, y: 3711974121218449851
+x: 6, y: 10788619898233492461
+x: 7, y: 26709394976508342463
+
+Result:
+Secret (constant term): 79836264049851
+==============================
+
 ```
 
 ## Acknowledgments
 
 - [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing) for providing the theoretical basis for this implementation.
 - Java and Gradle for being the foundation of this project.
+
+## Contact
+
+For any inquiries, please contact:
+
+- **Name**: Reuben Sebastian Joseph  
+- **Email**: reuben.joseph010@icloud.com  
+- **GitHub**: [reuben809](https://github.com/reuben809)
 
