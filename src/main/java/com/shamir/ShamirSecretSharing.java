@@ -140,7 +140,7 @@ public class ShamirSecretSharing {
     public static void main(String[] args) {
         try {
             if (args.length > 0) {
-                // Process file input
+                // Process all provided input files
                 for (int i = 0; i < args.length; i++) {
                     String jsonStr = readJsonFile(args[i]);
                     processTestCase(jsonStr, i + 1);
@@ -164,4 +164,3 @@ public class ShamirSecretSharing {
         }
     }
 }
-
