@@ -1,0 +1,30 @@
+// build.gradle
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.shamir'
+version '1.0-SNAPSHOT'
+
+// Update Java version to 21
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.shamir.ShamirSecretSharing'
+}
